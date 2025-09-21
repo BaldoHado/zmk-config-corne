@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -42,6 +43,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ToggleWindows {
+            bindings = <&tog 2>;
+            key-positions = <0 33 34 35>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -64,10 +74,10 @@
 
         mac_1 {
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3            &kp N4  &kp N5    &trans    &kp LBKT      &kp RBKT      &trans    &to 2     &trans
-&trans   &kp N6  &kp N7  &kp N8            &kp N9  &kp N0    &trans    &kp LS(LPAR)  &kp LS(RPAR)  &trans    &kp UP    &trans
-&trans   &trans  &trans  &trans            &trans  &trans    &kp BSLH  &kp LS(LBRC)  &kp LS(RBRC)  &kp LEFT  &kp DOWN  &kp RIGHT
-                         &kp LEFT_CONTROL  &trans  &trans    &trans    &trans        &trans
+&kp ESC  &kp N1  &kp N2  &kp N3            &kp N4  &kp N5    &rgb_ug RGB_ON   &kp LBKT      &kp RBKT      &trans    &trans    &trans
+&trans   &kp N6  &kp N7  &kp N8            &kp N9  &kp N0    &rgb_ug RGB_OFF  &kp LS(LPAR)  &kp LS(RPAR)  &trans    &kp UP    &trans
+&trans   &trans  &trans  &trans            &trans  &trans    &kp BSLH         &kp LS(LBRC)  &kp LS(RBRC)  &kp LEFT  &kp DOWN  &kp RIGHT
+                         &kp LEFT_CONTROL  &trans  &trans    &trans           &trans        &trans
             >;
         };
 
@@ -90,10 +100,10 @@
 
         windows_1 {
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3        &kp N4  &kp N5    &trans    &kp LBKT      &kp RBKT      &trans    &to 0     &trans
-&trans   &kp N6  &kp N7  &kp N8        &kp N9  &kp N0    &trans    &kp LS(LPAR)  &kp LS(RPAR)  &trans    &kp UP    &trans
-&trans   &trans  &trans  &trans        &trans  &trans    &kp BSLH  &kp LS(LBRC)  &kp LS(RBRC)  &kp LEFT  &kp DOWN  &kp RIGHT
-                         &kp LEFT_GUI  &trans  &trans    &trans    &trans        &trans
+&kp ESC  &kp N1  &kp N2  &kp N3        &kp N4  &kp N5    &rgb_ug RGB_ON   &kp LBKT      &kp RBKT      &trans    &trans    &trans
+&trans   &kp N6  &kp N7  &kp N8        &kp N9  &kp N0    &rgb_ug RGB_OFF  &kp LS(LPAR)  &kp LS(RPAR)  &trans    &kp UP    &trans
+&trans   &trans  &trans  &trans        &trans  &trans    &kp BSLH         &kp LS(LBRC)  &kp LS(RBRC)  &kp LEFT  &kp DOWN  &kp RIGHT
+                         &kp LEFT_GUI  &trans  &trans    &trans           &trans        &trans
             >;
         };
     };
