@@ -61,6 +61,11 @@
             bindings = <&bt BT_SEL 1>;
             key-positions = <2 33 34 35>;
         };
+
+        CLEAR_BT {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <13 33 34 35>;
+        };
     };
 
     keymap {
