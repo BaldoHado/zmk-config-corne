@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -49,6 +50,16 @@
         ToggleWindows {
             bindings = <&tog 2>;
             key-positions = <0 33 34 35>;
+        };
+
+        SELECT_BT_0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <1 33 35 34>;
+        };
+
+        SELECT_BT_1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <2 33 34 35>;
         };
     };
 
