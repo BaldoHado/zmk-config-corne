@@ -66,6 +66,11 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <13 33 34 35>;
         };
+
+        Ops_layer {
+            bindings = <&tog 4>;
+            key-positions = <29 33 34 35>;
+        };
     };
 
     keymap {
@@ -90,10 +95,10 @@
 
         mac_1 {
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3            &kp N4  &kp N5    &rgb_ug RGB_ON   &kp LBKT      &kp RBKT      &trans    &trans    &trans
-&trans   &kp N6  &kp N7  &kp N8            &kp N9  &kp N0    &rgb_ug RGB_OFF  &kp LS(LPAR)  &kp LS(RPAR)  &trans    &kp UP    &trans
-&trans   &trans  &trans  &trans            &trans  &trans    &kp BSLH         &kp LS(LBRC)  &kp LS(RBRC)  &kp LEFT  &kp DOWN  &kp RIGHT
-                         &kp LEFT_CONTROL  &trans  &trans    &trans           &trans        &trans
+&kp ESC  &kp N1  &kp N2  &kp N3            &kp N4  &kp N5    &trans    &kp LBKT      &kp RBKT      &trans    &trans    &trans
+&trans   &kp N6  &kp N7  &kp N8            &kp N9  &kp N0    &trans    &kp LS(LPAR)  &kp LS(RPAR)  &trans    &kp UP    &trans
+&trans   &trans  &trans  &trans            &trans  &trans    &kp BSLH  &kp LS(LBRC)  &kp LS(RBRC)  &kp LEFT  &kp DOWN  &kp RIGHT
+                         &kp LEFT_CONTROL  &trans  &trans    &trans    &trans        &trans
             >;
         };
 
@@ -120,6 +125,15 @@
 &trans   &kp N6  &kp N7  &kp N8        &kp N9  &kp N0    &rgb_ug RGB_OFF  &kp LS(LPAR)  &kp LS(RPAR)  &trans    &kp UP    &trans
 &trans   &trans  &trans  &trans        &trans  &trans    &kp BSLH         &kp LS(LBRC)  &kp LS(RBRC)  &kp LEFT  &kp DOWN  &kp RIGHT
                          &kp LEFT_GUI  &trans  &trans    &trans           &trans        &trans
+            >;
+        };
+
+        ops_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &rgb_ug RGB_ON   &rgb_ug RGB_OFF  &rgb_ug RGB_BRI     &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOLUME_UP  &kp C_VOL_DN     &kp C_FAST_FORWARD  &kp C_REWIND     &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans           &trans           &trans              &trans           &trans           &trans
+                        &trans  &trans  &trans    &trans           &trans           &trans
             >;
         };
     };
